@@ -1,3 +1,9 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
 header{
     background-color: #252830;
     height: 50px;
@@ -30,4 +36,68 @@ header{
 .header-nav ul li:hover{
     background-color: #000;
     cursor: pointer;
+}
+.text-center{
+    text-align: center;
+}
+.block{
+    display: block;
+    width: 100%
+}
+
+
+
+
+
+
+
+
+
+.ripple-effect{
+    position: relative;
+    animation: all ease-in-out;
+}
+.ripple-effect:before {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.ripple-effect:before {
+    border: solid 5px!important;
+}
+
+.ripple-effect:hover:before {
+    display: block;
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out;
+}
+
+
+@-webkit-keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+    border-radius: 100px;
+  }
+}
+
+@keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+    border-radius: 100px;
+  }
 }
