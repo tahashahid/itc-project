@@ -5,38 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <link rel="stylesheet" href="vendors/font-awesome-4.7.0/css/font-awesome.min">
+    <link rel="stylesheet" href="vendors/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/backgroundstyle.css">
 
     <title>Document</title>
+
+    <base href="/">
 </head>
-<body>
+<body ng-app="itc-project">
 
-    <header>
-        <div class="container">
-            <nav class="header-nav">
-                <ul>
-                    <li>
-                        Home
-                    </li>
-                    <li>
-                        Questions
-                    </li>
-                    <li>
-                        Answers
-                    </li>
-                </ul>
-            </nav>
-
-        </div>
-    </header>
+    <section>
+        <ui-view name="header"></ui-view>
+    </section>
     
     <section>
-
+        <!--<div ui-view name="content">
+        </div>-->
+        <ui-view name="content"></ui-view>
     </section>
 
-    <script src="vendors/jquery-3.2.1.min"></script>
-    <script src="vendors/angular.min"></script>
+    <script src="vendors/jquery-3.2.1.min.js"></script>
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/angular-ui-router.min.js"></script>
+
+    <script src="scripts/app.js"></script>
     
     
 </body>
