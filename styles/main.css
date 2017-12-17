@@ -2,6 +2,16 @@ html, body{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background-color: #f2f2f2;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.clearfix:after,
+.clearfix:before{
+    display: table;
+    content: " ";
+    clear: both;
 }
 
 header{
@@ -12,9 +22,19 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    overflow: hidden;
     box-shadow: 1px 1px 1px #808080;
     color: #fff;
+}
+.username{
+    padding: 15px;
+    margin-right: 20px;
+}
+.username:hover{
+    background: #000;
+    cursor: pointer;
+}
+.section-content{
+    margin-top: 60px;
 }
 .container{
     width: 100%;
@@ -30,12 +50,40 @@ header{
     float: left;
     list-style: none;
     font-size: 14px;
-    padding: 15px;
+    padding: 16px;
+    position: relative;
+    background-color: #252830;
+}
+.header-nav ul li a{
+    text-decoration: none;
+    color: #fff;
 }
 
 .header-nav ul li:hover{
     background-color: #000;
     cursor: pointer;
+}
+.header-nav ul li.active{
+    background-color: #000;
+    cursor: pointer;
+}
+
+.header-nav ul li:before{
+    transition: all .5s ease-in-out;
+    background-color: #000;
+    content: " ";
+    position: absolute;
+    box-shadow: 1px 1px 1px #808080;
+    top: calc(100% - 25px);
+    z-index: -1;
+    overflow: visible;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(45deg);
+    height: 20px;
+    width: 20px;
+}
+.header-nav ul li.active:before{
+    top: calc(100% - 10px);
 }
 .text-center{
     text-align: center;
@@ -100,4 +148,16 @@ header{
     opacity: 0;
     border-radius: 100px;
   }
+}
+
+.alert{
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
 }

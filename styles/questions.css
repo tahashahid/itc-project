@@ -1,0 +1,110 @@
+.questions-list{
+    max-height: calc(100vh - 165px);
+    overflow: scroll;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+
+.questions-list .single-question{
+    position: relative;
+    background-color: #fff;
+    /*margin: 30px -30px;*/
+    padding: 30px;
+}
+.single-question:hover{
+    background-color: #f2f2f2;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #c9c9c9;
+}
+
+.question-filter .search-box,
+.question-filter .badges-box
+{
+    float: left;
+    position: relative;
+    margin-bottom: 30px;
+    width: 50%;
+}
+.question-filter .badges-box{
+    text-align: right;
+}
+.question-filter .badges-box .search-input{
+    width: 200px;
+}
+.search-box .fa{
+    position: absolute;
+    top: calc(50%);
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.search-input{
+    outline: 0;
+    padding-left: 36px;
+    display: inline-block;
+    width: calc(100% - 125px);
+    min-height: 40px;
+    height: 40px;
+    padding: 10px 15px 10px 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    color: #656565;
+    background-color: #fff;
+    background-image: none;
+    font-size: 13px;
+    line-height: 13px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.search-input:hover,
+.search-input:focus{
+    box-shadow: 0 2px 10px 1px rgba(57,73,76,.4), 0 1px 2px rgba(57,73,76,.25);
+}
+
+.search-btn{
+    float: right;
+    padding: 11px 28px;
+    font-size: 14px;
+    line-height: 14px;
+    border-radius: 2px;
+    border: 2px solid transparent;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    background-image: none;
+    transition: all .15s;
+    color: #5e5959;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.search-btn:hover,
+.search-btn:focus{
+    outline: 0;
+    transition: all 1s;
+    box-shadow: 0 2px 10px 1px rgba(57,73,76,.4), 0 1px 2px rgba(57,73,76,.25);
+    background-color: #252830;
+    color: #fff;
+}
+.separator{
+    width: calc(100% - 50px);
+    margin: 1px auto;
+    border-bottom: 1px solid #e2dfdf;
+    position: absolute;
+    top: 100%;
+    margin-top: -1px;
+}
+.badges .badge{
+    background-color: gray;
+    border-radius: 20px;
+    padding: 2px 8px 3px;
+    display: inline-block;
+    font-size: 10px;
+    margin: 5px 5px 0 0;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.badges .badge:hover{
+    cursor: pointer;
+    background-color: #252830;
+    box-shadow: 0 2px 10px 1px rgba(57,73,76,.4), 0 1px 2px rgba(57,73,76,.25);
+}

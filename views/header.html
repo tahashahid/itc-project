@@ -2,17 +2,22 @@
     <div class="container">
         <nav class="header-nav">
             <ul>
-                <li>
-                    Home
+                <li ui-sref-active="active" ui-sref="base.home">
+                    <a href>
+                        <i class="fa fa-home"></i> Home
+                    </a>
                 </li>
-                <li>
-                    Questions
-                </li>
-                <li ui-sref="login"> 
-                    Answers
+                <li ui-sref-active="active" ui-sref="base.questions">
+                    <a href>
+                        <i class="fa fa-question"></i> Questions
+                    </a>
                 </li>
             </ul>
         </nav>
+
+        <div class="username pull-right">
+            <i class="fa fa-user-o"></i> {{userName}}
+        </div>
 
     </div>
 </header>
