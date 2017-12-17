@@ -8,28 +8,31 @@
     <link rel="stylesheet" href="vendors/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/backgroundstyle.css">
+    <link rel="stylesheet" href="styles/questions.css">
 
     <title>Document</title>
 
     <base href="/">
 </head>
-<body ng-app="itc-project">
+<body>
 
     <section>
-        <ui-view name="header"></ui-view>
+        <div ui-view name="header"></div>
     </section>
     
-    <section>
-        <!--<div ui-view name="content">
-        </div>-->
-        <ui-view name="content"></ui-view>
+    <section class="section-content">
+        <div ui-view name="content"></div>
     </section>
 
     <script src="vendors/jquery-3.2.1.min.js"></script>
     <script src="vendors/angular.min.js"></script>
     <script src="vendors/angular-ui-router.min.js"></script>
+    <script src="vendors/ngStorage.min.js"></script>
 
     <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/header.js"></script>
+    <script src="scripts/controllers/questions.js"></script>
+    <script src="scripts/controllers/question.js"></script>
     
     
 </body>
