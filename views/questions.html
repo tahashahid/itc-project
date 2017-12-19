@@ -25,7 +25,7 @@
         <div class="questions-list">
     
             <div class="single-question" ui-sref="base.home.question({questionId: question._id})"
-                ng-repeat="question in results = (questions | filter : {$: searchQuery.$, badges: searchQuery.badge})">
+                ng-repeat="question in results = (questions | filter : {question: searchQuery.$, badges: searchQuery.badge})">
                 <i class="fa fa-quora"></i>
                 <span ng-bind="question.question"></span>
                 <br><br>
