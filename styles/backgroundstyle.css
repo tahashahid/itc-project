@@ -1,6 +1,6 @@
 .bg-container{
 
-    background: url("./images/background.jpg");
+    background: url("/images/background.jpg");
     background-size: cover;
     background-position: center;
 
