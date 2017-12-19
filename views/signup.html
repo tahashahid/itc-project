@@ -5,16 +5,18 @@
     </div>
     <h1>Create Account</h1>
     
-    <form>
+    <form ng-submit="signup()" name="sugnupForm">
+
         <p>Username</p>
-        <input type="text" name="" placeholder="Enter Username">
+        <input type="text" name="" placeholder="Enter Username" ng-model="username" required>
         <p>Email</p>
-        <input type="email" name="" placeholder="Enter Email">
+        <input type="email" name="" placeholder="Enter Email" ng-model="email" required>
         <p>Password</p>
-        <input type="password" name="" placeholder="Enter password">
+        <input type="password" name="" placeholder="Enter password" ng-model="password" required>
         <p>Date Of Birth</p>
-        <input type="date" name="" placeholder="Enter Date Of Birth">
-        <button class="block ripple-effect">Sign Up</button>
+        <input type="date" name="" placeholder="Enter Date Of Birth" ng-model="dob" required>
+
+        <button type="submit" class="block ripple-effect">Sign Up</button>
 
         <a ui-sref="login">Already have an account?</a>
     </form>

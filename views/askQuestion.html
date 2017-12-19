@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="content">
+        <br>
+
+        <div class="back-link"> <span ui-sref="base.home"><i class="fa fa-arrow-left"></i> Back To Questions</span></div>
+
+        <div class="questions-list ask-question-container">
+            <form ng-submit="post()">
+            <div class="single-question ask-question">
+                <div class="question-input">
+                    <i class="fa fa-quora"></i>
+                    <h3>
+
+                        <div ng-model="question.question" single-line="true" focus-select="false" strip-replace="true"
+                        content-editable placeholder="What's Your Questions? Click To Edit." edit-callback="question.question = question.question.trim()" ng-class="{showPlaceHolder: !question.question}"></div>
+                        <span class="aftershowPlaceHolder" ng-hide="question.question">&nbsp;</span>
+                    </h3>
+                </div>
+                <div class="input-part badges-saperator">
+                    <input type="search" class="search-input" placeholder="questions related to? you can insert multiple" ng-model="badges">
+                </div>
+                <div class="input-part">
+                    <input type="checkbox" ng-checked="isHTML" ng-click="isHTML = !isHTML"> View HTML In Edit Mode
+                </div>
+                <div class="input-part">
+                    
+                    <div ng-model="question.description" render-html="false" content-editable ng-if="!isHTML">
+                        Questions description?
+                        <br>
+                        You can copy and past any thing here...
+                        <br>
+                        you can also check and edit the HTML in edit mode using the "View HTML In Edit Mode"
+                        
+
+                    </div>
+                    <div ng-model="question.description" render-html="true" content-editable ng-if="isHTML">
+                        Questions description?
+                        <br>
+                        You can copy and past any thing here...
+                        <br>
+                        you can also check and edit the HTML in edit mode using the "View HTML In Edit Mode"
+                        
+                    </div>
+                </div>
+                
+                <br>
+                <button class="search-btn" type="submit">Post Question</button>
+            </div>
+            </form>
+        </div>
+
+    </div>
+</div>

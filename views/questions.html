@@ -10,7 +10,8 @@
                 </form>
             </div>
             <div class="badges-box">
-                <select ng-model="searchQuery.badge" class="search-input">
+                <select ng-model="searchQuery.badge" class="search-input" >
+                    <option value="" selected>All Category</option>
                     <option ng-value="badge" ng-repeat="badge in getBadges()" ng-bind="badge"></option>
                 </select>
             </div>
@@ -23,7 +24,8 @@
 
         <div class="questions-list">
     
-            <div class="single-question" ng-repeat="question in results = (questions | filter : {$: searchQuery.$, badges: searchQuery.badge})">
+            <div class="single-question" ui-sref="base.home.question({questionId: question._id})"
+                ng-repeat="question in results = (questions | filter : {$: searchQuery.$, badges: searchQuery.badge})">
                 <i class="fa fa-quora"></i>
                 <span ng-bind="question.question"></span>
                 <br><br>

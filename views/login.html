@@ -4,11 +4,11 @@
     </div>
     <h1>Login Here</h1>
     
-    <form>
+    <form ng-submit="login()">
         <p>Username</p>
-        <input type="text" name="" placeholder="Enter Username">
+        <input type="text" name="" placeholder="Enter Username" ng-model="username" required>
         <p>Password</p>
-        <input type="password" name="" placeholder="Enter password">
+        <input type="password" name="" placeholder="Enter password" ng-model="password" required>
         <button class="block ripple-effect">Login</button>
         <a href="#">Forgot password?</a><br>
         <a ui-sref="signup">Create new account</a>

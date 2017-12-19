@@ -1,0 +1,84 @@
+.ask-question{
+    transition: none;
+    background: transparent !important;
+}
+.ask-question-container{
+    max-height: none !important;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+.ask-question .search-btn{
+    float: none;
+    margin-left: 40px; 
+}
+.ask-question .search-input, .input-part{
+    margin-left: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.input-part .search-input{
+    margin: 0;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+.ask-question .question-input{
+    margin-left: 5px;
+    border-bottom: 1px solid #f2f2f2;
+    
+}
+.question-input>h3{
+    margin: 0;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    display: inline-block; 
+}
+.question-description{
+    max-height: auto;
+    min-height: 100px;
+    height: auto;
+    line-height: 1.2em;
+    font-size: 15px
+}
+
+.editable:hover {
+    background-color: #eee;
+}
+
+.editable-custom {
+    font-size: 1.5rem;
+}
+
+.editable-custom:hover {
+    background-color: #28e7fb;
+    color: white;
+}
+
+.editable {
+    outline: none;
+    border: 0;
+    transition: all ease-in 150ms;
+}
+
+.editable.active {
+    padding: 10px;
+    border-left: 2px solid #355869;
+}
+
+.editable::selection {
+    background: rgba(75, 158, 172, 0.3);
+}
+
+b::selection, kbd::selection, strong::selection {
+    background: rgba(75, 158, 172, 0.3);
+}
+[content-editable].showPlaceHolder:not(:focus):before{
+    position: absolute;
+    content: attr(placeholder);
+    display: block;
+}
+[contenteditable]:focus~.aftershowPlaceHolder{
+    display: none;
+}
+.badges-saperator{
+    border-bottom: 1px solid #d9d6d6;
+}

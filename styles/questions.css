@@ -108,3 +108,15 @@
     background-color: #252830;
     box-shadow: 0 2px 10px 1px rgba(57,73,76,.4), 0 1px 2px rgba(57,73,76,.25);
 }
+.back-link{
+    margin-bottom: 15px;
+}
+.back-link>span{
+    font-weight: bold;
+    color: gray;
+    cursor: pointer;
+}
+.back-link>span:hover{
+    font-weight: bold;
+    color: #252830;
+}

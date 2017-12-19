@@ -1,4 +1,4 @@
 
-window.APP.controller("questionCtrl", function($scope){
-    
+window.APP.controller("questionCtrl", function($scope, question){
+    $scope.question = question;
 })

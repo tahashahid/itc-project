@@ -1,28 +1,12 @@
 <div class="container">
     <div class="content">
         <br>
-        <div class="question-filter clearfix">
-            <div class="search-box">
-                <span class="fa fa-search"></span>
-                <input type="search" class="search-input" placeholder="Search" ng-model="searchText.$">
-                <button class="search-btn" ng-click="searchQuery.$ = searchText.$">Search</button>
 
-            </div>
-            <div class="badges-box">
-                <select ng-model="searchQuery.badge" class="search-input">
-                    <option ng-value="badge" ng-repeat="badge in getBadges()" ng-bind="badge"></option>
-                </select>
-            </div>
-        </div>
-
-        <div class="alert alert-warning" ng-if="!results.length">
-            <i class="fa fa-warning"></i>
-            Questions not found! try another query.
-        </div>
+        <div class="back-link"> <span ui-sref="base.home"><i class="fa fa-arrow-left"></i> Back To Questions</span></div>
 
         <div class="questions-list">
     
-            <div class="single-question" ng-repeat="question in results = (questions | filter : {$: searchQuery.$, badges: searchQuery.badge})">
+            <div class="single-question ask-question">
                 <i class="fa fa-quora"></i>
                 <span ng-bind="question.question"></span>
                 <br><br>
@@ -30,7 +14,10 @@
                     <span class="badge" ng-repeat="badge in question.badges" ng-bind="badge">
                     </span>
                 </div>
-                <div class="separator"></div>
+                <br>
+                <div ng-bind-html="question.description | unsafe">
+
+                </div>
             </div>
     
         </div>
