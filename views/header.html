@@ -15,8 +15,12 @@
             </ul>
         </nav>
 
-        <div class="username pull-right">
-            <i class="fa fa-user-o"></i> {{userName}}
+        <div class="username pull-right" ng-click="logout()">
+            <span>
+                <i class="fa fa-user-o"></i>
+                <span class="name">{{userName}} </span>
+                <span class="logout">Logout</span>
+            </span>
         </div>
 
     </div>

@@ -33,6 +33,15 @@ header{
     margin-right: 20px;
     text-transform: capitalize;
 }
+.logout{
+    display: none;
+}
+.username:hover .name{
+    display: none
+}
+.username:hover .logout{
+    display: inline-block
+}
 .username:hover{
     background: #000;
     cursor: pointer;
