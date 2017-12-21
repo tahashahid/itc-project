@@ -1,0 +1,9 @@
+<div class="questions-list ask-question-container answers-list">
+    <div class="single-question ask-question" ng-repeat="answer in question.answers">
+        <i class="fa fa fa-font"></i>.
+        <span ng-bind="answer.answer"></span>
+        <br><br>
+        <div ng-bind-html="answer.description | unsafe" class="clearfix">
+        </div>
+    </div>
+</div>

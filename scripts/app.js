@@ -112,7 +112,7 @@ window.APP.run(function($localStorage){
             badges: ["programming", "javascript", "JSON"],
             answers: [{
                 answer: "You can convert an JSON file to an object by using JSON.parse",
-                description: ``
+                description: `hahaha`
             }]
         },
         {

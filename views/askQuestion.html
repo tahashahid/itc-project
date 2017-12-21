@@ -4,11 +4,11 @@
 
         <div class="back-link"> <span ui-sref="base.home"><i class="fa fa-arrow-left"></i> Back To Questions</span></div>
 
-        <div class="questions-list ask-question-container">
+        <div class="questions-list ask-question-container auto-height">
             <form ng-submit="post()">
             <div class="single-question ask-question">
                 <div class="question-input">
-                    <i class="fa fa-quora"></i>
+                    <i class="fa fa-quora"></i>.
                     <h3>
 
                         <div ng-model="question.question" single-line="true" focus-select="false" strip-replace="true"
@@ -24,7 +24,7 @@
                 </div>
                 <div class="input-part">
                     
-                    <div ng-model="question.description" render-html="false" content-editable ng-if="!isHTML">
+                    <div ng-model="question.description" render-html="false" content-editable ng-if="!isHTML" class="clearfix">
                         Questions description?
                         <br>
                         You can copy and past any thing here...
@@ -33,7 +33,7 @@
                         
 
                     </div>
-                    <div ng-model="question.description" render-html="true" content-editable ng-if="isHTML">
+                    <div ng-model="question.description" render-html="true" content-editable ng-if="isHTML" class="clearfix">
                         Questions description?
                         <br>
                         You can copy and past any thing here...

@@ -1,0 +1,39 @@
+<div class="questions-list ask-question-container">
+    <form ng-submit="postAnswer()">
+    <div class="single-question ask-question">
+        <div class="question-input">
+            <i class="fa fa-quote-left"></i>
+            <h3>
+                <div ng-model="answer.answer" single-line="true" focus-select="false" strip-replace="true"
+                content-editable placeholder="Answer! Click To Edit." edit-callback="answer.answer = answer.answer.trim()" ng-class="{showPlaceHolder: !answer.answer}"></div>
+                <span class="aftershowPlaceHolder" ng-hide="answer.answer">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="input-part">
+            <input type="checkbox" ng-checked="isHTML" ng-click="isHTML = !isHTML"> View HTML In Edit Mode
+        </div>
+        <div class="input-part">
+            
+            <div ng-model="answer.description" render-html="false" content-editable ng-if="!isHTML" class="clearfix">
+                Answer description?
+                <br>
+                You can copy and past any thing here...
+                <br>
+                you can also check and edit the HTML in edit mode using the "View HTML In Edit Mode"
+                
+            </div>
+            <div ng-model="answer.description" render-html="true" content-editable ng-if="isHTML" class="clearfix">
+                Answer description?
+                <br>
+                You can copy and past any thing here...
+                <br>
+                you can also check and edit the HTML in edit mode using the "View HTML In Edit Mode"
+                
+            </div>
+        </div>
+        
+        <br>
+        <button class="search-btn" type="submit">Post Answer</button>
+    </div>
+    </form>
+</div>

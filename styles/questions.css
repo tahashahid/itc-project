@@ -120,3 +120,7 @@
     font-weight: bold;
     color: #252830;
 }
+.answers-list .single-question{
+    border-bottom: 1px solid #d9d9d9;
+
+}

@@ -4,10 +4,10 @@
 
         <div class="back-link"> <span ui-sref="base.home"><i class="fa fa-arrow-left"></i> Back To Questions</span></div>
 
-        <div class="questions-list">
+        <div class="questions-list auto-height">
     
             <div class="single-question ask-question">
-                <i class="fa fa-quora"></i>
+                <i class="fa fa-quora"></i>.
                 <span ng-bind="question.question"></span>
                 <br><br>
                 <div class="badges">
@@ -15,12 +15,17 @@
                     </span>
                 </div>
                 <br>
-                <div ng-bind-html="question.description | unsafe">
-
+                <div ng-bind-html="question.description | unsafe" class="clearfix">
                 </div>
             </div>
     
         </div>
+        <hr>
+        <br>
+        <div ng-include="'views/answers.html'"></div>
+        <hr>
+        <br>
+        <div ng-include="'views/postAnswer.html'"></div>
 
     </div>
 </div>

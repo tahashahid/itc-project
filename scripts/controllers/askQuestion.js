@@ -3,7 +3,8 @@ window.APP.controller("askQuestionCtrl", function($scope, $localStorage, $state)
     $scope.badges = "";
     $scope.question = {
         _id: generateId(),
-        badges: []
+        badges: [],
+        answers: []
     };
 
     $scope.post = function(){

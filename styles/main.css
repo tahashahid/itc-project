@@ -174,3 +174,7 @@ header{
     background-color: #fcf8e3;
     border-color: #faebcc;
 }
+.auto-height{
+    height: auto !important;
+    max-height: none !important;
+}
